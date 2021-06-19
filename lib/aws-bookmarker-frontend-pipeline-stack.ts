@@ -79,18 +79,18 @@ export class AwsBookmarkerFrontendPipelineStack extends cdk.Stack {
                       "npm install -g yarn",
                       "yarn",
                       "echo install phase",
-                      "echo ${BOOKMARKER_AWS_REGION}",
-                      "echo ${BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT}",
-                      "echo ${BOOKMARKER_AWS_APPSYNC_API_KEY}",
-                      "echo ${BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE}",
-                      "echo ${BOOKMARKER_AWS_AUTH_USERPOOLID}",
-                      "echo ${BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_REGION}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_APPSYNC_API_KEY}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_AUTH_USERPOOLID}",
+                      "echo ${GATSBY_BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID}",
                     ],
                   },
                   build: {
                     commands: [
                       // "gatsby build"
-                      "BOOKMARKER_AWS_REGION=${BOOKMARKER_AWS_REGION} BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT=${BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT} BOOKMARKER_AWS_APPSYNC_API_KEY=${BOOKMARKER_AWS_APPSYNC_API_KEY} BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE=${BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE} BOOKMARKER_AWS_AUTH_USERPOOLID=${BOOKMARKER_AWS_AUTH_USERPOOLID} BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID=${BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID} npm run build",
+                      "GATSBY_BOOKMARKER_AWS_REGION=${GATSBY_BOOKMARKER_AWS_REGION} GATSBY_BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT=${GATSBY_BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT} GATSBY_BOOKMARKER_AWS_APPSYNC_API_KEY=${GATSBY_BOOKMARKER_AWS_APPSYNC_API_KEY} GATSBY_BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE=${GATSBY_BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE} GATSBY_BOOKMARKER_AWS_AUTH_USERPOOLID=${GATSBY_BOOKMARKER_AWS_AUTH_USERPOOLID} GATSBY_BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID=${GATSBY_BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID} npm run build",
                     ],
                   },
                 },
@@ -107,32 +107,32 @@ export class AwsBookmarkerFrontendPipelineStack extends cdk.Stack {
               environmentVariables: {
                 BOOKMARKER_AWS_REGION: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_REGION",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_REGION",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
                 BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_APPSYNC_GRAPHQLENDPOINT",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
                 BOOKMARKER_AWS_APPSYNC_API_KEY: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_APPSYNC_API_KEY",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_APPSYNC_API_KEY",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
                 BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_APPSYNC_AUTHENTICATIONTYPE",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
                 BOOKMARKER_AWS_AUTH_USERPOOLID: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_AUTH_USERPOOLID",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_AUTH_USERPOOLID",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
                 BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID: {
                   value:
-                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID",
+                    "AWS_BOOKMARKER_FRONTEND_ENV_VARIABLES:GATSBY_BOOKMARKER_AWS_AUTH_USERPOOL_WEBCLIENTID",
                   type: CodeBuild.BuildEnvironmentVariableType.SECRETS_MANAGER,
                 },
               },
